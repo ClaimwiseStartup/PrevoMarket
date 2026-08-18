@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+
+html { background: #f7f8fa; }
+@media (prefers-color-scheme: dark) { html { background: #0a0c10; } }
+
+body { font-family: var(--font-system); -webkit-font-smoothing: antialiased; }
+.mono { font-family: var(--font-mono); letter-spacing: 0.01em; }
+
+@keyframes sheen {
+  0% { transform: translateX(-120%) skewX(-15deg); }
+  100% { transform: translateX(220%) skewX(-15deg); }
+}
+.sheen-parent:hover .sheen { animation: sheen 0.9s ease; }
